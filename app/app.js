@@ -1,7 +1,7 @@
 'use strict';
 
 angular
-  .module('templateProjectName', [
+  .module('hankNoraWedding', [
     'ngAnimate',
     'ngCookies',
     'ngResource',

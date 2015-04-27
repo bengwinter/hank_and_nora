@@ -1,1 +1,1 @@
-#### templateProjectName Read Me
+#### Hank and Nora's Wedding Website Read Me

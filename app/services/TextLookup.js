@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('templateProjectName').factory('TextLookupService',
+angular.module('hankNoraWedding').factory('TextLookupService',
   function($http, $rootScope) {
     var Service = function() {};
 

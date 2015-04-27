@@ -1,5 +1,5 @@
 angular
-  .module('templateProjectName')
+  .module('hankNoraWedding')
     .directive('showErrors', function($timeout) {
       return {
         restrict: 'A',

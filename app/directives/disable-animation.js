@@ -1,5 +1,5 @@
 angular
-  .module('templateProjectName')
+  .module('hankNoraWedding')
     .directive('disableAnimation', function($animate){
     return {
         restrict: 'A',
