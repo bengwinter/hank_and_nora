@@ -1,5 +1,5 @@
 angular
-  .module('musicMaven')
+  .module('hankNoraWedding')
     .directive('disableAnimation', function($animate){
     return {
         restrict: 'A',
@@ -10,35 +10,27 @@ angular
         }
     }
 });angular
-  .module('musicMaven')
+  .module('hankNoraWedding')
     .directive('resize', function ($window) {
       return function (scope, element) {
         var w = angular.element($window);
 
         scope.getWindowDimensions = function () {
-
-          if(w.height() < 650) {
-            var windowHeight = 650;
-          } else {
-            var windowHeight = w.height();
-          }     
-
-          return { 'h': windowHeight, 'w': w.width(), 's': w.scrollTop()};
+          return { 'h': w.height(), 'w': w.width(), 's': w.scrollTop()};
         };
 
         scope.$watch(scope.getWindowDimensions, function (newValue, oldValue) {
-          scope.setHeightWidthAndPadding = function (percentage, paddingTopPercentage, paddingBottomPercentage, mobilePaddingPercentage) {
-
-            if(newValue.w > 768) {
-              mobilePaddingPercentage = 1;
+          scope.setHeight = function (offset, paddingPercentage) {
+            if(newValue.h > 500) {
+              var windowHeight = (newValue.h - offset);
+            } else {
+              var windowHeight = (500 - offset);
             }
 
             return {
-              'height': (newValue.h * percentage) + 'px',
-              'width': (newValue.w) + 'px',
-              'padding-top': (newValue.h * percentage * paddingTopPercentage * mobilePaddingPercentage) + 'px',
-              'padding-bottom': (newValue.h * percentage * paddingBottomPercentage * mobilePaddingPercentage) + 'px',
-              'min-height': (newValue.h * percentage) + 'px'
+              'height': (windowHeight) + 'px',
+              'padding-top': (windowHeight * paddingPercentage) + 'px',
+              'padding-bottom': (windowHeight * paddingPercentage) + 'px'
             };
           };
                 
@@ -49,7 +41,7 @@ angular
         });
       }
     });angular
-  .module('musicMaven')
+  .module('hankNoraWedding')
     .directive('showErrors', function($timeout) {
       return {
         restrict: 'A',
@@ -91,7 +83,7 @@ angular
       }
     });'use strict';
 
-angular.module('musicMaven').factory('TextLookupService',
+angular.module('hankNoraWedding').factory('TextLookupService',
   function($http, $rootScope) {
     var Service = function() {};
 
@@ -127,7 +119,7 @@ angular.module('musicMaven').factory('TextLookupService',
     return Service;
   });'use strict';
 
-angular.module('musicMaven').factory('DataService',
+angular.module('hankNoraWedding').factory('DataService',
   function($http, $rootScope, $location) {
     var Service = function() {};
 

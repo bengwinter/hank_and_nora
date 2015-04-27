@@ -3,14 +3,87 @@
 @import url("../styles/animations.less");
 @import url("../styles/breakpoints.less");
 
-#home-section {
-  background-color: @blue;
-  text-align: center;
-  font-size: 25px;
+.section {
+  font-size: 30px;
+  
+  h4 {
+    font-size: 140%;
+    font-weight: 900;
+  }
 
-  #opening-text {
-    h1 {
-      color: @white;
+  p {
+    font-size: 100%;
+    font-weight: 600;
+    margin: 0 0 2% 0;
+  }
+
+  a {
+    text-decoration: none;
+    color: @active_gold;
+  }
+
+  .pending-text {
+    font-style: italic;
+    margin-top: 3%;
+  }
+}
+
+
+#activities-section {
+  ul {
+    padding: 0;
+    margin: 0;
+    text-align: center;
+    list-style-type: none;
+
+    i {
+      font-size: 35%;
+      vertical-align: middle;
     }
+
+    li {
+      padding: 0 1%;
+      display: inline;
+
+      p, a {
+        display: inline;
+      }
+      
+
+      a {
+        text-decoration: none;
+        font-weight: 500;
+        color: @gold;
+      }
+    }
+  }
+}
+
+#events-section {
+  ul {
+    list-style-type: none;
+    
+    li {
+
+      .event-bold {
+        font-weight: 600;
+        font-size: 110%;
+      }
+    }
+  }
+}
+
+
+#rsvp-section {
+
+  #rsvp-button {
+    border: 1px solid @active_gold;
+    border-radius: 0px;
+    font-size: 100%;
+  }
+
+  #rsvp-button:hover {
+    background-color: @active_gold;
+    color: @white;
   }
 }

@@ -1,0 +1,56 @@
+@import url("../styles/colors.less");
+@import url("../styles/fonts.less");
+@import url("../styles/breakpoints.less");
+
+#main-navbar {
+  font-family: "futura-pt";
+  font-size: 18px;
+  height: 100px;
+  background-color: transparent;
+  color: @white;
+  border: none;
+  border-top: 10px solid @yellow;
+  margin-bottom: 0;
+
+  #links-container {
+    padding-top: 31px;
+    
+    ul {
+      padding: 0;
+      margin: 0;
+      text-align: center;
+      list-style-type: none;
+
+
+      li {
+        padding: 0 2%;
+        display: inline;  
+
+        a {
+          text-decoration: none;
+          
+
+          font-size: 60%;
+          color: @gold;
+
+          .breakpoint-small({
+            font-size: 60%;
+          });
+
+          .breakpoint-medium({
+            font-size: 80%;
+          });
+
+          .breakpoint-large({
+            font-size: 100%;
+          });
+        }
+
+        a.active {
+          color: @active_gold;
+        }
+      }
+    }
+    
+  }
+}

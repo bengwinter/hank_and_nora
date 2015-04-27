@@ -4,6 +4,10 @@
     <meta charset="utf-8">
     <title>Hank and Nora</title>
 
+    <!-- Futura Font -->
+    <script src="//use.typekit.net/lfk8exb.js"></script>
+    <script>try{Typekit.load();}catch(e){}</script>
+    
     <!-- favicon links -->
     <link rel="apple-touch-icon-precomposed" sizes="57x57" href="../images/favicon/apple-touch-icon-57x57.png" />
     <link rel="apple-touch-icon-precomposed" sizes="114x114" href="../images/favicon/apple-touch-icon-114x114.png" />
@@ -32,6 +36,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
     <link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css">
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,700,300,600,800,400' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" href="main.css">
 
     <script>
@@ -50,10 +55,11 @@
   </head>
 
   <body ng-app="hankNoraWedding">
+    
     <div id='main-view-container' class="container-fluid">
       <div ng-view="" autoscroll="true"></div>
     </div>
-
+    <ng-include src="'navbar/navbar.html'" ng-controller="NavbarCtrl"></ng-include>
     <script src="bundle-lib.js"></script>
     <script src="bundle-ng.js"></script>
     <script src="bundle-directives.js"></script>

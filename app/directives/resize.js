@@ -5,29 +5,21 @@ angular
         var w = angular.element($window);
 
         scope.getWindowDimensions = function () {
-
-          if(w.height() < 650) {
-            var windowHeight = 650;
-          } else {
-            var windowHeight = w.height();
-          }     
-
-          return { 'h': windowHeight, 'w': w.width(), 's': w.scrollTop()};
+          return { 'h': w.height(), 'w': w.width(), 's': w.scrollTop()};
         };
 
         scope.$watch(scope.getWindowDimensions, function (newValue, oldValue) {
-          scope.setHeightWidthAndPadding = function (percentage, paddingTopPercentage, paddingBottomPercentage, mobilePaddingPercentage) {
-
-            if(newValue.w > 768) {
-              mobilePaddingPercentage = 1;
+          scope.setHeight = function (offset, paddingPercentage) {
+            if(newValue.h > 500) {
+              var windowHeight = (newValue.h - offset);
+            } else {
+              var windowHeight = (500 - offset);
             }
 
             return {
-              'height': (newValue.h * percentage) + 'px',
-              'width': (newValue.w) + 'px',
-              'padding-top': (newValue.h * percentage * paddingTopPercentage * mobilePaddingPercentage) + 'px',
-              'padding-bottom': (newValue.h * percentage * paddingBottomPercentage * mobilePaddingPercentage) + 'px',
-              'min-height': (newValue.h * percentage) + 'px'
+              'height': (windowHeight) + 'px',
+              'padding-top': (windowHeight * paddingPercentage) + 'px',
+              'padding-bottom': (windowHeight * paddingPercentage) + 'px'
             };
           };
                 

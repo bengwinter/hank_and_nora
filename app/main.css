@@ -1,11 +1,3 @@
-@font-face {
-  font-family: 'NexaBold';
-  src: url(../fonts/Nexa_Bold.otf);
-}
-@font-face {
-  font-family: 'NexaLight';
-  src: url(../fonts/Nexa_Light.otf);
-}
 @keyframes fadein {
   from {
     opacity: 0;
@@ -52,14 +44,11 @@
 }
 html {
   min-height: 100%;
-  font-family: 'NexaLight';
+  font-family: "futura-pt";
   font-weight: 300;
-  -webkit-touch-callout: none;
-  -webkit-user-select: none;
-  -khtml-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
+}
+body {
+  font-family: "futura-pt";
 }
 h1,
 h2,
@@ -67,114 +56,114 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: 'NexaBold';
-  pointer-events: none;
+  font-family: "futura-pt";
+  color: #bc9c00;
 }
-#home-section {
-  background-color: #29abe2;
-  text-align: center;
-  font-size: 25px;
+p {
+  font-family: "futura-pt";
 }
-#home-section #opening-text h1 {
-  display: none;
+.section {
+  font-size: 30px;
 }
-#home-section #opening-text p {
-  color: #ffffff;
-  font-family: 'NexaLight';
-  padding: 0 2.5%;
-  font-size: 85%;
-  margin-bottom: 3.5%;
+.section h4 {
+  font-size: 140%;
+  font-weight: 900;
 }
-@media screen and (min-width: 768px) {
-  #home-section #opening-text p {
-    font-size: 105%;
-  }
+.section p {
+  font-size: 100%;
+  font-weight: 600;
+  margin: 0 0 2% 0;
 }
-@media screen and (min-width: 992px) {
-  #home-section #opening-text p {
-    font-size: 120%;
-  }
+.section a {
+  text-decoration: none;
+  color: #6d5800;
 }
-@media screen and (min-width: 1200px) {
-  #home-section #opening-text p {
-    font-size: 135%;
-  }
+.section .pending-text {
+  font-style: italic;
+  margin-top: 3%;
 }
-#home-section #opening-text img {
-  max-width: 75%;
-  margin-bottom: 5%;
-}
-#home-section #opening-text h6 {
-  font-size: 75%;
-}
-@media screen and (min-width: 768px) {
-  #home-section #opening-text h6 {
-    font-size: 100%;
-  }
-}
-#home-section .form-container .form-group .help-block {
-  display: none;
-}
-#home-section .form-container .form-group.has-error .help-block {
-  display: block;
-  margin: 1%;
-  font-size: 70%;
-  color: rbga(231, 65, 93, 1);
-}
-@media screen and (min-width: 992px) {
-  #home-section .form-container .form-group.has-error .help-block {
-    font-size: 90%;
-  }
-}
-#home-section .form-container .input-container {
-  margin: 0% .75% 2% .75%;
-}
-#home-section .form-container .form-group.has-error .input-container {
-  margin: 0% .75%;
-}
-#home-section .form-container .form-control {
-  font-size: 75%;
-  border-radius: 0px;
-  border: 2px solid #cccccc;
-}
-@media screen and (min-width: 1200px) {
-  #home-section .form-container .form-control {
-    font-size: 100%;
-  }
-}
-#home-section .form-container input.form-control {
-  padding: 6% 3% 5% 3%;
-  min-height: 50px;
-  font-family: 'NexaLight';
-  -moz-box-sizing: border-box;
-}
-#home-section .form-container .contact-button {
-  background-color: #000000;
-  border-radius: 0px;
-  border-color: #cccccc;
-  color: #ffffff;
-  height: 50px;
-  width: 80%;
-}
-@media screen and (min-width: 992px) {
-  #home-section .form-container .contact-button {
-    width: 50%;
-  }
-}
-#home-section .form-container .contact-message {
-  display: none;
-  font-size: 65%;
-  font-family: 'NexaLight';
+#activities-section ul {
+  padding: 0;
   margin: 0;
+  text-align: center;
+  list-style-type: none;
 }
-#home-section .form-container .successMessage {
-  display: block;
-  color: #47bd81;
+#activities-section ul i {
+  font-size: 35%;
+  vertical-align: middle;
 }
-#home-section .form-container .failureMessage {
-  display: block;
-  color: rbga(231, 65, 93, 1);
+#activities-section ul li {
+  padding: 0 1%;
+  display: inline;
 }
-#home-section .form-container .hideButton {
-  display: none;
+#activities-section ul li p,
+#activities-section ul li a {
+  display: inline;
+}
+#activities-section ul li a {
+  text-decoration: none;
+  font-weight: 500;
+  color: #bc9c00;
+}
+#events-section ul {
+  list-style-type: none;
+}
+#events-section ul li .event-bold {
+  font-weight: 600;
+  font-size: 110%;
+}
+#rsvp-section #rsvp-button {
+  border: 1px solid #6d5800;
+  border-radius: 0px;
+  font-size: 100%;
+}
+#rsvp-section #rsvp-button:hover {
+  background-color: #6d5800;
+  color: #ffffff;
+}
+#main-navbar {
+  font-family: "futura-pt";
+  font-size: 18px;
+  height: 100px;
+  background-color: transparent;
+  color: #ffffff;
+  border: none;
+  border-top: 10px solid #ffd700;
+  margin-bottom: 0;
+}
+#main-navbar #links-container {
+  padding-top: 31px;
+}
+#main-navbar #links-container ul {
+  padding: 0;
+  margin: 0;
+  text-align: center;
+  list-style-type: none;
+}
+#main-navbar #links-container ul li {
+  padding: 0 2%;
+  display: inline;
+}
+#main-navbar #links-container ul li a {
+  text-decoration: none;
+  font-size: 60%;
+  color: #bc9c00;
+}
+@media screen and (min-width: 768px) {
+  #main-navbar #links-container ul li a {
+    font-size: 60%;
+  }
+}
+@media screen and (min-width: 992px) {
+  #main-navbar #links-container ul li a {
+    font-size: 80%;
+  }
+}
+@media screen and (min-width: 1200px) {
+  #main-navbar #links-container ul li a {
+    font-size: 100%;
+  }
+}
+#main-navbar #links-container ul li a.active {
+  color: #6d5800;
 }

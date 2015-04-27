@@ -3,7 +3,7 @@ var DOMAIN = 'http://sendgrid-ben-site.herokuapp.com';
 var SEND_CONTACT_FORM = DOMAIN + '/mail_july_camp';'use strict';
 
 angular
-  .module('musicMaven', [
+  .module('hankNoraWedding', [
     'ngAnimate',
     'ngCookies',
     'ngResource',
@@ -22,7 +22,31 @@ angular
     
     $routeProvider
       .when('/', {
-        templateUrl: 'home/home.html',
+        templateUrl: 'home/sections/the_wedding.html',
+        controller: 'HomeCtrl'
+      }).when('/the_wedding', {
+        templateUrl: 'home/sections/the_wedding.html',
+        controller: 'HomeCtrl'
+      }).when('/events', {
+        templateUrl: 'home/sections/events.html',
+        controller: 'HomeCtrl'
+      }).when('/our_story', {
+        templateUrl: 'home/sections/our_story.html',
+        controller: 'HomeCtrl'
+      }).when('/details', {
+        templateUrl: 'home/sections/details.html',
+        controller: 'HomeCtrl'
+      }).when('/activities', {
+        templateUrl: 'home/sections/activities.html',
+        controller: 'HomeCtrl'
+      }).when('/registry', {
+        templateUrl: 'home/sections/registry.html',
+        controller: 'HomeCtrl'
+      }).when('/gallery', {
+        templateUrl: 'home/sections/gallery.html',
+        controller: 'HomeCtrl'
+      }).when('/rsvp', {
+        templateUrl: 'home/sections/rsvp.html',
         controller: 'HomeCtrl'
       }).otherwise({
         redirectTo: '/'
@@ -30,47 +54,23 @@ angular
   });'use strict';
 
 angular
-  .module('musicMaven')
+  .module('hankNoraWedding')
     .controller('HomeCtrl', function ($scope, $rootScope, TextLookupService, DataService) {
-      $scope.form = {};
-      $scope.submitMessage = "";
-
-      TextLookupService.getText('home.json').success(function(data){       
-        $scope.text = data;
-      });
-
-      $scope.sendSignUpForm = function() {
-        $scope.$broadcast('show-errors-check-validity');
-        if ($scope.form.signUp.$valid) {
-          var contactEmail = $scope.form.signUp.email.$viewValue;
-      
-          var origin = location.origin;
-
-          var data = {email: contactEmail, origin: origin};
-          
-          DataService.sendContactForm(data).success(function(data){
-            if (data["success"]) { 
-
-            } else {
-  
-            }
-            
-            
-          });
-        };
-      };
+      $scope.landingPage = "Start Template for AngularJS Project";
     
-      $scope.$on('CONTACT_FORM_SUCCESS', function(response) {
-        $scope.$broadcast('show-errors-reset');
-        $scope.submitMessage = "Thank you for contacting us. Someone will be in touch within the next 24-48 hours."
-        $scope.submitMessageSuccess = true;
-        $scope.signUp = { name: '', email: '', message: '', telephone: '' };
-      });
+      
+    });
+'use strict';
 
-      $scope.$on('CONTACT_FORM_ERROR', function(response) {
-        $scope.submitMessage = "There was an error submitting your message. Please try again."
-        $scope.submitMessageSuccess = false;
-      });
+angular
+  .module('hankNoraWedding')    
+    .controller('NavbarCtrl', function ($scope, $routeParams, $rootScope, TextLookupService, $location, $window) {
       
-      
+
+      $scope.isActive = function (viewLocation) {
+        var viewLocationString = viewLocation.substring(1);  
+        return viewLocationString === $location.path();
+      };
+
+
     });
