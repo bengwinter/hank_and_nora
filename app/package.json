@@ -1,0 +1,14 @@
+{
+  "name": "templateProjectName",
+  "description": "templateProjectName",
+  "author": "Ben Winter <ben@julycamp.com>",
+  "dependencies": {
+    "browserify": "^8.1.1",
+    "less": "^2.2.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "templateProjectName"
+  },
+  "engine": "node 0.10.33"
+}
