@@ -17,7 +17,7 @@ angular
             }
 
             return {
-              'height': (windowHeight) + 'px',
+              'min-height': (windowHeight) + 'px',
               'padding-top': (windowHeight * paddingPercentage) + 'px',
               'padding-bottom': (windowHeight * paddingPercentage) + 'px'
             };
