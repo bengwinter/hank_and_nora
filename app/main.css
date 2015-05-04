@@ -67,13 +67,43 @@ p {
   overflow: scroll;
 }
 .section h4 {
-  font-size: 140%;
   font-weight: 900;
+  font-size: 80%;
+}
+@media screen and (min-width: 768px) {
+  .section h4 {
+    font-size: 100%;
+  }
+}
+@media screen and (min-width: 992px) {
+  .section h4 {
+    font-size: 120%;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .section h4 {
+    font-size: 140%;
+  }
 }
 .section p {
-  font-size: 100%;
+  font-size: 60%;
   font-weight: 600;
-  margin: 0 0 2% 0;
+  margin: 0;
+}
+@media screen and (min-width: 768px) {
+  .section p {
+    font-size: 80%;
+  }
+}
+@media screen and (min-width: 992px) {
+  .section p {
+    font-size: 100%;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .section p {
+    font-size: 120%;
+  }
 }
 .section a {
   text-decoration: none;
@@ -126,14 +156,18 @@ p {
   font-family: "futura-pt";
   font-size: 18px;
   height: 100px;
-  background-color: transparent;
-  color: #ffffff;
+  background-color: #ffffff;
   border: none;
   border-top: 10px solid #ffd700;
   margin-bottom: 0;
 }
 #main-navbar #links-container {
-  padding-top: 31px;
+  padding-top: 20px;
+}
+@media screen and (min-width: 768px) {
+  #main-navbar #links-container {
+    padding-top: 31px;
+  }
 }
 #main-navbar #links-container ul {
   padding: 0;
@@ -141,30 +175,30 @@ p {
   text-align: center;
   list-style-type: none;
 }
-#main-navbar #links-container ul li {
+#main-navbar #links-container .link {
   padding: 0 2%;
   display: inline;
 }
-#main-navbar #links-container ul li a {
+#main-navbar #links-container .link a {
   text-decoration: none;
   font-size: 60%;
   color: #bc9c00;
 }
 @media screen and (min-width: 768px) {
-  #main-navbar #links-container ul li a {
-    font-size: 60%;
+  #main-navbar #links-container .link a {
+    font-size: 65%;
   }
 }
 @media screen and (min-width: 992px) {
-  #main-navbar #links-container ul li a {
-    font-size: 80%;
+  #main-navbar #links-container .link a {
+    font-size: 85%;
   }
 }
 @media screen and (min-width: 1200px) {
-  #main-navbar #links-container ul li a {
+  #main-navbar #links-container .link a {
     font-size: 100%;
   }
 }
-#main-navbar #links-container ul li a.active {
+#main-navbar #links-container .link a.active {
   color: #6d5800;
 }

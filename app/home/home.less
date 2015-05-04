@@ -8,14 +8,39 @@
   overflow: scroll;
   
   h4 {
-    font-size: 140%;
     font-weight: 900;
+    font-size: 80%;
+
+    .breakpoint-small({
+      font-size: 100%;
+    });
+    .breakpoint-medium({
+      font-size: 120%;
+    });
+
+    .breakpoint-large({
+      font-size: 140%;
+    });
+
+
   }
 
   p {
-    font-size: 100%;
+    font-size: 60%;
     font-weight: 600;
-    margin: 0 0 2% 0;
+    margin: 0;
+
+
+    .breakpoint-small({
+      font-size: 80%;
+    });
+    .breakpoint-medium({
+      font-size: 100%;
+    });
+
+    .breakpoint-large({
+      font-size: 120%;
+    });
   }
 
   a {

@@ -6,23 +6,25 @@
   font-family: "futura-pt";
   font-size: 18px;
   height: 100px;
-  background-color: transparent;
-  color: @white;
+  background-color: @white;
   border: none;
   border-top: 10px solid @yellow;
   margin-bottom: 0;
 
   #links-container {
-    padding-top: 31px;
+    padding-top: 20px;
+    .breakpoint-small ({
+      padding-top: 31px;  
+    });
+    
     
     ul {
       padding: 0;
       margin: 0;
       text-align: center;
       list-style-type: none;
-
-
-      li {
+    }
+    .link {
         padding: 0 2%;
         display: inline;  
 
@@ -34,11 +36,11 @@
           color: @gold;
 
           .breakpoint-small({
-            font-size: 60%;
+            font-size: 65%;
           });
 
           .breakpoint-medium({
-            font-size: 80%;
+            font-size: 85%;
           });
 
           .breakpoint-large({
@@ -51,6 +53,4 @@
         }
       }
     }
-    
-  }
 }
