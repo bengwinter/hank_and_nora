@@ -29,6 +29,7 @@
     font-size: 60%;
     font-weight: 600;
     margin: 0;
+    margin-bottom: 20px;
 
 
     .breakpoint-small({
@@ -105,7 +106,19 @@
   #rsvp-button {
     border: 1px solid @active_gold;
     border-radius: 0px;
-    font-size: 100%;
+    font-size: 60%;
+
+    .breakpoint-small({
+      font-size: 80%;
+    });
+    .breakpoint-medium({
+      font-size: 100%;
+    });
+    
+    .breakpoint-large({
+      font-size: 120%;
+    });
+    
   }
 
   #rsvp-button:hover {

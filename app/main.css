@@ -89,6 +89,7 @@ p {
   font-size: 60%;
   font-weight: 600;
   margin: 0;
+  margin-bottom: 20px;
 }
 @media screen and (min-width: 768px) {
   .section p {
@@ -146,7 +147,22 @@ p {
 #rsvp-section #rsvp-button {
   border: 1px solid #6d5800;
   border-radius: 0px;
-  font-size: 100%;
+  font-size: 60%;
+}
+@media screen and (min-width: 768px) {
+  #rsvp-section #rsvp-button {
+    font-size: 80%;
+  }
+}
+@media screen and (min-width: 992px) {
+  #rsvp-section #rsvp-button {
+    font-size: 100%;
+  }
+}
+@media screen and (min-width: 1200px) {
+  #rsvp-section #rsvp-button {
+    font-size: 120%;
+  }
 }
 #rsvp-section #rsvp-button:hover {
   background-color: #6d5800;
@@ -176,8 +192,13 @@ p {
   list-style-type: none;
 }
 #main-navbar #links-container .link {
-  padding: 0 2%;
+  padding: 0px 5%;
   display: inline;
+}
+@media screen and (min-width: 768px) {
+  #main-navbar #links-container .link {
+    padding: 0 2%;
+  }
 }
 #main-navbar #links-container .link a {
   text-decoration: none;
