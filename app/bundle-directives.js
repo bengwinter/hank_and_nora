@@ -27,10 +27,12 @@ angular
               var windowHeight = (500 - offset);
             }
 
+            var paddingHeight = ((windowHeight - element.height())/2);
+
             return {
               'height': (windowHeight) + 'px',
-              'padding-top': (windowHeight * paddingPercentage) + 'px',
-              'padding-bottom': (windowHeight * paddingPercentage) + 'px'
+              'padding-top': paddingHeight + 'px',
+              'padding-bottom': paddingHeight + 'px'
             };
           };
                 
