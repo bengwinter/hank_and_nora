@@ -9,19 +9,25 @@ angular
         };
 
         scope.$watch(scope.getWindowDimensions, function (newValue, oldValue) {
-          scope.setHeight = function (offset, paddingPercentage) {
-            if(newValue.h > 500) {
-              var windowHeight = (newValue.h - offset);
-            } else {
-              var windowHeight = (500 - offset);
-            }
-
-            var paddingHeight = ((windowHeight - element.height())/2);
+          scope.setHeight = function (offset) {
+            var windowHeight = newValue.h - offset;
+            var sectionHeight = element.height();
+            var paddingHeight = ((windowHeight - sectionHeight)/2);
 
             return {
               'height': (windowHeight) + 'px',
               'padding-top': paddingHeight + 'px',
               'padding-bottom': paddingHeight + 'px'
+            };
+          };
+
+          scope.setHeightNoPadding = function (offset) {
+            var windowHeight = newValue.h - offset;
+            var sectionHeight = element.height();
+            var paddingHeight = ((windowHeight - sectionHeight)/2);
+
+            return {
+              'height': (windowHeight) + 'px'
             };
           };
                 

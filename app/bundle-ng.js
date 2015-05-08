@@ -22,7 +22,7 @@ angular
     
     $routeProvider
       .when('/', {
-        templateUrl: 'home/sections/the_wedding.html',
+        templateUrl: 'home/sections/landing.html',
         controller: 'HomeCtrl'
       }).when('/the_wedding', {
         templateUrl: 'home/sections/the_wedding.html',

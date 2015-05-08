@@ -62,6 +62,12 @@ h6 {
 p {
   font-family: "futura-pt";
 }
+@media screen and (min-width: 768px) {
+  .container-fluid {
+    padding-left: 0;
+    padding-right: 0;
+  }
+}
 .section {
   font-size: 30px;
   overflow: scroll;
@@ -113,6 +119,21 @@ p {
 .section .pending-text {
   font-style: italic;
   margin-top: 3%;
+}
+#landing-section {
+  background-image: url(../images/landing.jpg);
+  background-size: cover;
+  background-position: bottom;
+  background-repeat: no-repeat;
+}
+@media screen and (min-width: 768px) {
+  #landing-section {
+    background-image: url(../images/landing_wide.jpg);
+  }
+}
+#landing-section h2 {
+  font-size: 200%;
+  margin: 10px;
 }
 #activities-section ul {
   padding: 0;
