@@ -14,9 +14,6 @@ angular
             var sectionHeight = element.height();
             var paddingHeight = ((windowHeight - sectionHeight)/2);
 
-            console.log(windowHeight);
-            console.log(sectionHeight);
-            console.log(paddingHeight);
             return {
               'height': (windowHeight) + 'px',
               'padding-top': paddingHeight + 'px',
