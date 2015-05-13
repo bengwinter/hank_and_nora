@@ -80,7 +80,6 @@ p {
 }
 .section {
   font-size: 30px;
-  overflow: scroll;
 }
 .section h4 {
   font-weight: 900;
