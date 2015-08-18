@@ -43,12 +43,18 @@
   }
 }
 html {
-  min-height: 100%;
   font-family: "futura-pt";
   font-weight: 300;
 }
 body {
   font-family: "futura-pt";
+  position: absoulte;
+  display: block;
+  height: 87.5%;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  font-weight: 400;
 }
 h1,
 h2,
@@ -129,6 +135,31 @@ p {
   font-style: italic;
   margin-top: 3%;
 }
+.vertical-center {
+  position: relative;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+.paragraph-note {
+  font-size: 50% !important;
+}
+@media screen and (min-width: 768px) {
+  .paragraph-note {
+    font-size: 70% !important;
+  }
+}
+@media screen and (min-width: 992px) {
+  .paragraph-note {
+    font-size: 90% !important;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .paragraph-note {
+    font-size: 110% !important;
+  }
+}
 #landing-section {
   background-image: url(../images/landing.jpg);
   background-size: cover;
@@ -201,19 +232,15 @@ p {
 #main-navbar {
   font-family: "futura-pt";
   font-size: 18px;
-  height: 100px;
+  height: 12.5%;
   background-color: #ffffff;
   border: none;
   border-top: 10px solid #ffd700;
-  margin-bottom: 0;
+  margin: 0;
+  min-height: 70px;
 }
-#main-navbar #links-container {
-  padding-top: 20px;
-}
-@media screen and (min-width: 768px) {
-  #main-navbar #links-container {
-    padding-top: 31px;
-  }
+#main-navbar .navbar-container {
+  height: 100%;
 }
 #main-navbar #links-container ul {
   padding: 0;
