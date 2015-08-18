@@ -1,17 +1,14 @@
 <div id="activities-section" class="section col-xs-12 col-sm-10 col-sm-offset-1">
   <div class="row">
-    <p>Below you’ll find a list of fun things to do around the area, broken down by category.</p>
+    <p>For things to do in the area, we recommend checking out the following <a href="http://www.gostowe.com/thingstodo" target="_blank">website</a>. Or, check out below for our top three in each category (If you’re interested in checking out Montpelier or Burlington while you’re here, we included a few options)</p>
     <ul>
-      <li><p>All</p></li><i class="fa fa-circle"></i>
-      <li><p>Food</p></li><i class="fa fa-circle"></i>
-      <li><p>Drink</p></li><i class="fa fa-circle"></i>
-      <li><p>Tours</p></li><i class="fa fa-circle"></i>
-      <li><p>Outdoors</p></li><i class="fa fa-circle"></i>
-      <li><p>Events</p></li><i class="fa fa-circle"></i>
-      <li><p>Around Town</p></li>
+      <li><p ng-click="changeActivity('food', $event)" class="selected-category">Food</p></li><i class="fa fa-circle"></i>
+      <li><p ng-click="changeActivity('drink', $event)">Drink</p></li><i class="fa fa-circle"></i>
+      <li><p ng-click="changeActivity('tours', $event)">Tours & Museums</p></li><i class="fa fa-circle"></i>
+      <li><p ng-click="changeActivity('outdoors', $event)">Outdoors</p></li>
     </ul>
   </div>
-  <div class="row">
-    <p class="pending-text">Activities are coming soon</p>
+  <div class="row selected-activities">
+    <p ng-repeat="activity in selectedCategory"><i class="fa fa-plus"></i>{{activity}}</p>
   </div>
 </div>

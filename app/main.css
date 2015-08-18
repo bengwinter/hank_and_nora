@@ -52,10 +52,23 @@ body {
   margin: 0;
   padding: 0;
   font-weight: 400;
+  margin-bottom: 100px;
+  font-size: 18px;
+}
+@media screen and (min-width: 768px) {
+  body {
+    font-size: 24px;
+  }
 }
 @media screen and (min-width: 992px) {
   body {
-    min-height: 550px;
+    min-height: 600px;
+    font-size: 30px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  body {
+    font-size: 36px;
   }
 }
 h1,
@@ -86,48 +99,14 @@ p {
     padding-right: 15px;
   }
 }
-.section {
-  font-size: 30px;
-}
 .section h4 {
   font-weight: 900;
-  font-size: 80%;
-}
-@media screen and (min-width: 768px) {
-  .section h4 {
-    font-size: 100%;
-  }
-}
-@media screen and (min-width: 992px) {
-  .section h4 {
-    font-size: 120%;
-  }
-}
-@media screen and (min-width: 1200px) {
-  .section h4 {
-    font-size: 140%;
-  }
+  font-size: 125%;
 }
 .section p {
-  font-size: 60%;
   font-weight: 600;
   margin: 0;
   margin-bottom: 20px;
-}
-@media screen and (min-width: 768px) {
-  .section p {
-    font-size: 80%;
-  }
-}
-@media screen and (min-width: 992px) {
-  .section p {
-    font-size: 100%;
-  }
-}
-@media screen and (min-width: 1200px) {
-  .section p {
-    font-size: 120%;
-  }
 }
 .section a {
   text-decoration: none;
@@ -145,23 +124,8 @@ p {
   transform: translateY(-50%);
 }
 .paragraph-note {
-  font-size: 40% !important;
+  font-size: 80% !important;
   font-style: italic;
-}
-@media screen and (min-width: 768px) {
-  .paragraph-note {
-    font-size: 50% !important;
-  }
-}
-@media screen and (min-width: 992px) {
-  .paragraph-note {
-    font-size: 60% !important;
-  }
-}
-@media screen and (min-width: 1200px) {
-  .paragraph-note {
-    font-size: 80% !important;
-  }
 }
 #landing-section {
   background-image: url(../images/landing.jpg);
@@ -195,14 +159,35 @@ p {
 #activities-section ul li p,
 #activities-section ul li a {
   display: inline;
+  cursor: pointer;
+}
+#activities-section ul li p.selected-category {
+  color: #bc9c00;
 }
 #activities-section ul li a {
   text-decoration: none;
   font-weight: 500;
   color: #bc9c00;
 }
+#activities-section .selected-activities {
+  margin-top: 25px;
+  text-align: center;
+}
+#activities-section .selected-activities p {
+  margin-bottom: 10px;
+  text-align: left;
+}
+#activities-section .selected-activities i {
+  font-size: 50%;
+  color: #bc9c00;
+  margin-right: 5px;
+}
 #events-section ul {
   list-style-type: none;
+}
+#events-section ul li p {
+  font-weight: 100;
+  font-size: 90%;
 }
 #events-section ul li .event-bold {
   font-weight: 600;

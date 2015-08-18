@@ -4,40 +4,15 @@
 @import url("../styles/breakpoints.less");
 
 .section {
-  font-size: 30px;
   h4 {
     font-weight: 900;
-    font-size: 80%;
-
-    .breakpoint-small({
-      font-size: 100%;
-    });
-    .breakpoint-medium({
-      font-size: 120%;
-    });
-
-    .breakpoint-large({
-      font-size: 140%;
-    });
+    font-size: 125%;
   }
 
   p {
-    font-size: 60%;
     font-weight: 600;
     margin: 0;
     margin-bottom: 20px;
-
-
-    .breakpoint-small({
-      font-size: 80%;
-    });
-    .breakpoint-medium({
-      font-size: 100%;
-    });
-
-    .breakpoint-large({
-      font-size: 120%;
-    });
   }
 
   a {
@@ -61,19 +36,8 @@
 
 
 .paragraph-note {
-  font-size: 40% !important;
+  font-size: 80% !important;
   font-style: italic;
-
-  .breakpoint-small({
-    font-size: 50% !important;
-  });
-  .breakpoint-medium({
-    font-size: 60% !important;
-  });
-
-  .breakpoint-large({
-    font-size: 80% !important;
-  });
 }
 
 #landing-section {
@@ -110,8 +74,12 @@
 
       p, a {
         display: inline;
+        cursor: pointer;
       }
       
+      p.selected-category {
+        color: @gold;
+      }
 
       a {
         text-decoration: none;
@@ -120,6 +88,23 @@
       }
     }
   }
+
+  .selected-activities {
+    margin-top: 25px;
+    text-align: center;
+
+    p {
+      margin-bottom: 10px;
+      text-align: left;
+    }
+
+    i {
+      font-size: 50%;
+      color: @gold;
+      margin-right: 5px;
+    }
+
+  }
 }
 
 #events-section {
@@ -127,7 +112,10 @@
     list-style-type: none;
     
     li {
-
+      p {
+        font-weight: 100;
+        font-size: 90%
+      }
       .event-bold {
         font-weight: 600;
         font-size: 110%;
