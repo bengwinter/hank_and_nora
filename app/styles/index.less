@@ -3,21 +3,20 @@
 @import url("breakpoints.less");
 @import url("animations.less");
 
-
-html {
-  font-family: "futura-pt";
-  font-weight: 300;
-}
-
 body {
   font-family: "futura-pt";
-  position: absoulte;
+  min-height: 450px;
+  position: absolute;
   display: block;
   height: 87.5%;
   width: 100%;
   margin: 0;
   padding: 0;
   font-weight: 400;
+
+  .breakpoint-medium({
+    min-height: 550px;
+  });
 }
 
 h1, h2, h3, h4, h5, h6, {
